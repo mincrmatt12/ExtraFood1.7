@@ -3,6 +3,7 @@ package dmf444.ExtraFood.Common.blocks.guis;
 
 import org.lwjgl.opengl.GL11;
 
+import dmf444.ExtraFood.Core.lib.GuiLib;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.renderer.entity.RenderItem;
@@ -48,7 +49,7 @@ public String[] pre;
 
 	public void drawButton(Minecraft m, int p1, int p2){
 
-			m.getTextureManager().bindTexture(new ResourceLocation("extrafood", "textures/gui/cookbookgui.png"));
+			m.getTextureManager().bindTexture(GuiLib.CBborder);
 			GL11.glDisable(GL11.GL_LIGHTING);
 			GL11.glEnable(GL11.GL_BLEND);
 			this.drawTexturedModalRect(xPosition, yPosition, 2, 204, 22, 22);

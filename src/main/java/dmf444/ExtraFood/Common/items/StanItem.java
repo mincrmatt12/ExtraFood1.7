@@ -5,7 +5,7 @@ import dmf444.ExtraFood.Core.EFTabs;
 
 public class StanItem extends Item {
 
-	public StanItem(int id) {
+	public StanItem() {
 		super();
 		this.setCreativeTab(EFTabs.INSTANCE);
 	}

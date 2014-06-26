@@ -6,13 +6,15 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
+import dmf444.ExtraFood.Core.lib.GuiLib;
+
 public class ButtonBackGUI extends GuiButton
 {
     /**
      * True for pointing right (next page), false for pointing left (previous page).
      */
     private final boolean nextPage;
-    private static final ResourceLocation arrowsGUI = new ResourceLocation("extrafood", "textures/gui/ArrowsBF.png");
+
 
     public ButtonBackGUI(int par1, int par2, int par3, boolean par4)
     {
@@ -30,7 +32,7 @@ public class ButtonBackGUI extends GuiButton
             boolean flag = par2 >= this.xPosition && par3 >= this.yPosition && par2 < this.xPosition + this.width && par3 < this.yPosition + this.height;
             GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
             GL11.glEnable(GL11.GL_BLEND);
-            par1Minecraft.getTextureManager().bindTexture(arrowsGUI);
+            par1Minecraft.getTextureManager().bindTexture(GuiLib.arrowsGUI);
             int k = 0;
             int l = 176;
             if (flag)

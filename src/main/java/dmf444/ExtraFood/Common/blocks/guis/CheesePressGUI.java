@@ -8,6 +8,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import dmf444.ExtraFood.Common.blocks.container.CheesePressContainer;
 import dmf444.ExtraFood.Common.blocks.tileentity.CheesePressTileEntity;
+import dmf444.ExtraFood.Core.lib.GuiLib;
 
 public class CheesePressGUI extends GuiContainer {
 CheesePressTileEntity te;
@@ -31,9 +32,9 @@ CheesePressTileEntity te;
     protected void drawGuiContainerBackgroundLayer(float par1, int par2,
                     int par3) {
             //draw your Gui here, only thing you need to change is the path
-    	ResourceLocation r = new ResourceLocation("extrafood", "textures/gui/cheese_press.png");
+
     	GL11.glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-    		this.mc.renderEngine.bindTexture(r);            
+    		this.mc.renderEngine.bindTexture(GuiLib.CPgui);            
     		int x = (width - xSize) / 2;
     		int y = (height - ySize) / 2;
     		this.drawTexturedModalRect(x, y, 0, 0, xSize, ySize);

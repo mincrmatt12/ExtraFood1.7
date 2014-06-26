@@ -12,6 +12,7 @@ import org.lwjgl.opengl.GL11;
 import dmf444.ExtraFood.Common.blocks.container.AutoCutterContainer;
 import dmf444.ExtraFood.Common.blocks.tileentity.AutoCutterTileEntity;
 import dmf444.ExtraFood.Core.FontLoader;
+import dmf444.ExtraFood.Core.lib.GuiLib;
 
 
 
@@ -39,7 +40,7 @@ AutoCutterTileEntity te;
             //draw your Gui here, only thing you need to change is the path
     	ResourceLocation r = new ResourceLocation("extrafood", "textures/gui/Auto_Cutter.png");
     	GL11.glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-    		this.mc.renderEngine.bindTexture(r);            
+    		this.mc.renderEngine.bindTexture(GuiLib.ACgui);            
     		int x = (width - xSize) / 2;
     		int y = (height - ySize) / 2;
     		this.drawTexturedModalRect(x, y, 0, 0, xSize, ySize);

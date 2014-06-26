@@ -9,7 +9,7 @@ public class Knife extends StanItem {
 	
 	public Knife()
 	{
-        super(3);
+        super();
         this.maxStackSize = 1;
         this.setMaxDamage(10);
         this.setTextureName("extrafood:knife");

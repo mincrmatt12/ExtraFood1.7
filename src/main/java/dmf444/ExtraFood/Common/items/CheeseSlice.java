@@ -6,7 +6,7 @@ import dmf444.ExtraFood.Core.EFTabs;
 
 public class CheeseSlice extends Item {
 
-	public CheeseSlice(int id) {
+	public CheeseSlice() {
 		super();
 		this.setCreativeTab(EFTabs.INSTANCE);
 		this.setTextureName("extrafood:Bad_Cheeseslice");

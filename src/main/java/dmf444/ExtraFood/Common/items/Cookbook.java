@@ -3,16 +3,16 @@ package dmf444.ExtraFood.Common.items;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import dmf444.ExtraFood.ExtraFood;
 import dmf444.ExtraFood.Common.blocks.guis.CookBookGUI;
-import dmf444.ExtraFood.Core.ExtraFood;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class Cookbook extends StanItem {
 
-	public Cookbook(int id) {
-		super(id);
+	public Cookbook() {
+		super();
 		this.setTextureName("extrafood:Cookbook");
 		// TODO Auto-generated constructor stub
 	}

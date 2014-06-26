@@ -9,12 +9,12 @@ import net.minecraft.util.StatCollector;
 
 import org.lwjgl.opengl.GL11;
 
-import dmf444.ExtraFood.Core.ExtraFood;
+import dmf444.ExtraFood.ExtraFood;
+import dmf444.ExtraFood.Core.lib.GuiLib;
 
 public class CRPageGUI extends GuiScreen {
 
-ResourceLocation bookopen = new ResourceLocation("extrafood", "textures/gui/book_texture.png");
-ResourceLocation Cinterface = new ResourceLocation("extrafood", "textures/gui/craftingbookGUI1.png");
+
 String pageTextFrom;
 private ItemStack[] items;
 RenderItem irender;
@@ -53,7 +53,9 @@ GuiButton backGUI;
 	 //parts = string.split("-")
      int i = (this.width - CookBookGUI.achievementsPaneWidth) / 2;
      int j = (this.height - CookBookGUI.achievementsPaneHeight) / 2;
-	 this.fontRendererObj.drawSplitString(pageTextFrom, i + 26, j + 19, 93, 0x0000000);
+     this.fontRendererObj.setUnicodeFlag(true);
+	 this.fontRendererObj.drawSplitString(pageTextFrom, i + 28, j + 19, 93, 0x0000000);
+     this.fontRendererObj.setUnicodeFlag(false);
 	 }
 
  public void initGui(){
@@ -74,11 +76,11 @@ protected void drawBookBackground() {
     int k1 = j1 - 32;
 	
     GL11.glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-	this.mc.getTextureManager().bindTexture(bookopen);
+	this.mc.getTextureManager().bindTexture(GuiLib.CBopen);
     this.drawTexturedModalRect(i1, j1, 0, 0, CookBookGUI.achievementsPaneWidth, CookBookGUI.achievementsPaneHeight + 50);
 
 
-    this.mc.getTextureManager().bindTexture(Cinterface);
+    this.mc.getTextureManager().bindTexture(GuiLib.CBcraftgrid);
     GL11.glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
     GL11.glEnable(GL11.GL_BLEND);
     this.drawTexturedModalRect(i1 + 145, j1 + 26, 0, 0, CookBookGUI.achievementsPaneWidth, CookBookGUI.achievementsPaneHeight);

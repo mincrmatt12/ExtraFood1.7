@@ -1,4 +1,4 @@
-package dmf444.ExtraFood.Core;
+package dmf444.ExtraFood;
 
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
@@ -16,6 +16,10 @@ import dmf444.ExtraFood.Common.RecipeHandler.CRPageCraftGet;
 import dmf444.ExtraFood.Common.RecipeHandler.RegistryAutoCutter;
 import dmf444.ExtraFood.Common.blocks.BlockLoader;
 import dmf444.ExtraFood.Common.items.ItemLoader;
+import dmf444.ExtraFood.Core.AchieveLoad;
+import dmf444.ExtraFood.Core.CraftingRecipies;
+import dmf444.ExtraFood.Core.GuiHandler;
+import dmf444.ExtraFood.Core.TreeManager;
 import dmf444.ExtraFood.Core.lib.ModInfo;
 
 

@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 
 public class CheeseWheel extends ItemFood {
 
-	public CheeseWheel(int par1, int par2, float f, boolean b) {
+	public CheeseWheel(int par2, float f, boolean b) {
 		super(8, 0.6F, false);
 		this.setMaxStackSize(64);
 		this.setCreativeTab(EFTabs.INSTANCE);

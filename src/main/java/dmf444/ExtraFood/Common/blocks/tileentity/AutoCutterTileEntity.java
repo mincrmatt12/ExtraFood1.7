@@ -8,8 +8,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import dmf444.ExtraFood.ExtraFood;
 import dmf444.ExtraFood.Common.items.ItemLoader;
-import dmf444.ExtraFood.Core.ExtraFood;
 
 
 public class AutoCutterTileEntity extends TileEntity implements ISidedInventory {

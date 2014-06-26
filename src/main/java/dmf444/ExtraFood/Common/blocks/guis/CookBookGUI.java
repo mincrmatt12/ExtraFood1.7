@@ -23,6 +23,7 @@ import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.AchievementPage;
 import dmf444.ExtraFood.Common.RecipeHandler.CookbookButtonLoader;
 import dmf444.ExtraFood.Common.items.ItemLoader;
+import dmf444.ExtraFood.Core.lib.GuiLib;
 
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
@@ -58,8 +59,6 @@ public class CookBookGUI extends GuiScreen {
 
     /** The right y coordinate of the achievement map */
     private static final int guiMapRight = maxDisplayRow * 24 - 77;
-    ResourceLocation r = new ResourceLocation("extrafood", "textures/gui/cookbookgui.png");
-    ResourceLocation back = new ResourceLocation("extrafood", "textures/gui/cookbook_background1.png");
     protected static int achievementsPaneWidth = 256;
     protected static int achievementsPaneHeight = 202;
     
@@ -197,7 +196,7 @@ public class CookBookGUI extends GuiScreen {
         GL11.glColor4f(f1, f1, f1, 1.0F);
 
 
-        this.mc.getTextureManager().bindTexture(back);
+        this.mc.getTextureManager().bindTexture(GuiLib.CBback);
         GL11.glPushMatrix();
 		GL11.glScalef(1.2F, 1.2F, 1.2F);
         this.drawTexturedModalRect(i1 - 13, j1 - 2, iox, yox, this.achievementsPaneWidth - 53, this.achievementsPaneHeight - 45);  
@@ -209,7 +208,7 @@ public class CookBookGUI extends GuiScreen {
         GL11.glDisable(GL11.GL_DEPTH_TEST);
         GL11.glEnable(GL11.GL_BLEND);
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.getTextureManager().bindTexture(r);
+        this.mc.getTextureManager().bindTexture(GuiLib.CBborder);
         this.drawTexturedModalRect(i1, j1, 0, 0, this.achievementsPaneWidth, this.achievementsPaneHeight);
         GL11.glPopMatrix();
         this.zLevel = 0.0F;
@@ -283,16 +282,6 @@ public class CookBookGUI extends GuiScreen {
     	return (int) (x*(1-w)+y*w);
     	
     }
-    private static void drawTexturedQuadFit(double x, double y, double width, double height, double zLevel){
-		Tessellator tessellator = Tessellator.instance;
-        tessellator.startDrawingQuads();
-        tessellator.addVertexWithUV(x + 0, y + height, zLevel, 0,1);
-        tessellator.addVertexWithUV(x + width, y + height, zLevel, 1, 1);
-        tessellator.addVertexWithUV(x + width, y + 0, zLevel, 1,0);
-        tessellator.addVertexWithUV(x + 0, y + 0, zLevel, 0, 0);
-        tessellator.draw();
-	}
+
     
-
-
 }

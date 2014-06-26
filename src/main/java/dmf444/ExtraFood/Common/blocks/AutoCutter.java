@@ -15,9 +15,9 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import dmf444.ExtraFood.ExtraFood;
 import dmf444.ExtraFood.Common.blocks.tileentity.AutoCutterTileEntity;
 import dmf444.ExtraFood.Core.EFTabs;
-import dmf444.ExtraFood.Core.ExtraFood;
 
 public class AutoCutter extends BlockContainer  {
 
