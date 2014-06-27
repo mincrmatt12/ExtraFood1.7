@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "extrafood",
+  "name": "Extra Food",
+  "description": "A mod that adds more foods, whilist making it as complicated as possible.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["mincrmatt12","dmf444"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
